@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="348.0" prefWidth="712.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs.map.lab7.controller.AppController">
+   <children>
+      <Button fx:id="Delogare" layoutX="18.0" layoutY="14.0" mnemonicParsing="false" onAction="#switchToLogare" prefHeight="25.0" prefWidth="91.0" text="Delogare" />
+      <TableView fx:id="prietenieTableView" layoutX="18.0" layoutY="44.0" prefHeight="287.0" prefWidth="272.0">
+        <columns>
+          <TableColumn fx:id="nume" prefWidth="75.0" text="Nume" />
+          <TableColumn fx:id="prenume" prefWidth="75.0" text="Prenume" />
+            <TableColumn fx:id="userName" prefWidth="105.66665649414062" text="UserName" />
+        </columns>
+      </TableView>
+      <TableView fx:id="requestTableView" layoutX="484.0" layoutY="43.0" prefHeight="219.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="userNameRequest" prefWidth="110.33328247070312" text="UserName" />
+          <TableColumn fx:id="requestData" prefWidth="87.0" text="Data" />
+        </columns>
+      </TableView>
+      <TextField fx:id="usernameMesaj" layoutX="312.0" layoutY="44.0" promptText="Catre" />
+      <TextArea fx:id="mesaj" layoutX="312.0" layoutY="81.0" prefHeight="72.0" prefWidth="149.0" promptText="Mesaj" />
+      <Button fx:id="trimiteMesaj" layoutX="341.0" layoutY="168.0" mnemonicParsing="false" onAction="#adaugaMesaj" prefHeight="25.0" prefWidth="91.0" text="Trimite Mesaj" />
+      <Button fx:id="conversatie" layoutX="341.0" layoutY="206.0" mnemonicParsing="false" onAction="#afisareConversatii" prefHeight="25.0" prefWidth="91.0" text="Conversatie" />
+      <Button fx:id="btnAccepta" layoutX="486.0" layoutY="267.0" mnemonicParsing="false" onAction="#accepta" prefHeight="25.0" prefWidth="65.0" text="Accepta" />
+      <Button fx:id="btnRespinge" layoutX="620.0" layoutY="267.0" mnemonicParsing="false" onAction="#respinge" text="Respinge" />
+      <Button fx:id="btnTrimiteRequest" layoutX="593.0" layoutY="300.0" mnemonicParsing="false" onAction="#addRequest" text="Trimite Cerere" />
+      <TextField fx:id="getRequestTo" layoutX="486.0" layoutY="300.0" prefHeight="25.0" prefWidth="91.0" promptText="Catre" />
+      <Button fx:id="btnSterge" layoutX="559.0" layoutY="267.0" mnemonicParsing="false" onAction="#deleteRequest" text="Sterge" />
+      <Button fx:id="btnStergePrietenie" layoutX="341.0" layoutY="267.0" onAction="#deleteFriendship" mnemonicParsing="false" text="Sterge Prieten" />
+   </children>
+</AnchorPane>

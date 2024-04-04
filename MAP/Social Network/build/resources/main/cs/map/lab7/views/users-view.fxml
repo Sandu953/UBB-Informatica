@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="430.0" prefWidth="1145.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs.map.lab7.controller.UserControler">
+   <children>
+      <TableView fx:id="userTableView" layoutX="53.0" layoutY="14.0" prefHeight="282.0" prefWidth="349.0">
+        <columns>
+            <TableColumn fx:id="id" prefWidth="61.333346366882324" text="ID" />
+            <TableColumn fx:id="nume" prefWidth="141.33330535888672" text="Nume" />
+            <TableColumn fx:id="prenume" prefWidth="130.6666717529297" text="Prenume" />
+        </columns>
+      </TableView>
+      <TextField fx:id="getPrenume" layoutX="436.0" layoutY="81.0" prefHeight="17.0" prefWidth="149.0" promptText="Prenume" />
+      <TextField fx:id="getID" layoutX="436.0" layoutY="14.0" promptText="ID" />
+      <Button fx:id="btnAdd" layoutX="453.0" layoutY="123.0" mnemonicParsing="false" onAction="#adauga" prefHeight="25.0" prefWidth="116.0" text="Adauga" />
+      <Button fx:id="btnDelete" layoutX="453.0" layoutY="160.0" mnemonicParsing="false" onAction="#sterge" prefHeight="25.0" prefWidth="116.0" text="Sterge" />
+      <Button fx:id="btnAll" layoutX="453.0" layoutY="202.0" mnemonicParsing="false" onAction="#afisare" prefHeight="25.0" prefWidth="116.0" text="Afisare Utilizatori" />
+      <Button fx:id="btnNFriends" layoutX="51.0" layoutY="368.0" mnemonicParsing="false" onAction="#nPrieteni" prefHeight="25.0" prefWidth="149.0" text="Cel putin n prieteni" />
+      <TextField fx:id="getN" layoutX="51.0" layoutY="339.0" prefHeight="17.0" prefWidth="149.0" />
+      <Button fx:id="btnLuna" layoutX="254.0" layoutY="371.0" mnemonicParsing="false" onAction="#utilizatoriLuna" prefHeight="25.0" prefWidth="149.0" text="Prieteni pe luna" />
+      <TextField fx:id="getLuna" layoutX="254.0" layoutY="339.0" prefHeight="17.0" prefWidth="149.0" promptText="Luna" />
+      <TextField fx:id="getIDLuna" layoutX="254.0" layoutY="308.0" prefHeight="17.0" prefWidth="149.0" promptText="ID" />
+      <Button fx:id="btnString" layoutX="433.0" layoutY="371.0" mnemonicParsing="false" onAction="#utlizatoriString" prefHeight="25.0" prefWidth="149.0" text="Utilizarori string" />
+      <TextField fx:id="getStr" layoutX="433.0" layoutY="339.0" prefHeight="17.0" prefWidth="149.0" promptText="String" />
+      <TextField fx:id="getNume" layoutX="436.0" layoutY="48.0" promptText="Nume" />
+      <Button fx:id="btnUpdate" layoutX="452.0" layoutY="244.0" mnemonicParsing="false" onAction="#updateUser" prefHeight="25.0" prefWidth="116.0" text="Modifica" />
+      <Button fx:id="btnAdMesaj" layoutX="625.0" layoutY="200.0" mnemonicParsing="false" onAction="#adaugaMesaj" prefHeight="25.0" prefWidth="116.0" text="Adauga Mesaj" />
+      <TextField fx:id="getIDFrom" layoutX="608.0" layoutY="14.0" promptText="ID From" />
+      <TextField fx:id="getIDTo" layoutX="608.0" layoutY="48.0" promptText="ID To" />
+      <TextArea fx:id="getMesaj" layoutX="608.0" layoutY="81.0" prefHeight="103.0" prefWidth="149.0" promptText="Mesaj" />
+      <Button fx:id="btnConv" layoutX="625.0" layoutY="244.0" mnemonicParsing="false" onAction="#afisareConversatii" prefHeight="25.0" prefWidth="116.0" text="Conversatie" />
+      <TableView fx:id="requestTableView" layoutX="802.0" layoutY="14.0" prefHeight="282.0" prefWidth="294.0">
+        <columns>
+          <TableColumn fx:id="idfrom" prefWidth="63.333251953125" text="ID From" />
+          <TableColumn fx:id="idto" prefWidth="60.3333740234375" text="ID To" />
+            <TableColumn fx:id="data_from" prefWidth="97.666748046875" text="Data" />
+            <TableColumn fx:id="status" prefWidth="81.333251953125" text="Status" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnAddCerere" layoutX="829.0" layoutY="370.0" mnemonicParsing="false" onAction="#addRequest" prefHeight="25.0" prefWidth="116.0" text="Adauga cerere" />
+      <TextField fx:id="getIDToR" layoutX="813.0" layoutY="338.0" promptText="ID To" />
+      <TextField fx:id="getIDFromR" layoutX="813.0" layoutY="308.0" promptText="ID From" />
+      <Button fx:id="accepta" layoutX="697.0" layoutY="370.0" mnemonicParsing="false" onAction="#accepta" prefHeight="25.0" prefWidth="116.0" text="Accepta" />
+      <Button fx:id="respinge" layoutX="978.0" layoutY="368.0" mnemonicParsing="false" onAction="#respinge" prefHeight="25.0" prefWidth="116.0" text="Respinge" />
+      <Button fx:id="btnDelCerere" layoutX="978.0" layoutY="339.0" mnemonicParsing="false" onAction="#deleteRequest" prefHeight="25.0" prefWidth="116.0" text="Sterge cerere" />
+      <Button fx:id="previousUser" layoutX="51.0" layoutY="307.0" mnemonicParsing="false" onAction="#onPreviousUser" text="Previous" />
+      <Button fx:id="nextUser" layoutX="147.0" layoutY="307.0" mnemonicParsing="false" onAction="#onNextUser" prefHeight="25.0" prefWidth="52.0" text="Next" />
+      <Button fx:id="nextRequest" layoutX="1050.0" layoutY="308.0" mnemonicParsing="false" onAction="#onNextRequest" prefHeight="25.0" prefWidth="44.0" text="Next" />
+      <Button fx:id="previousRequest" layoutX="978.0" layoutY="308.0" mnemonicParsing="false" onAction="#onPreviousRequest" text="Previous" />
+      <ComboBox fx:id="elementePagina" layoutX="608.0" layoutY="307.0" onAction="#setPageSize" prefWidth="150.0" promptText="Elemente pe pagina" />
+      <Button fx:id="logare" layoutX="453.0" layoutY="295.0" mnemonicParsing="false" onAction="#logare" prefHeight="25.0" prefWidth="116.0" text="Logare" />
+      <Label fx:id="curentPageLabel" layoutX="53.0" layoutY="396.0" text="Label" />
+      <Label fx:id="maximPageLabel" layoutX="98.0" layoutY="396.0" text="Label" />
+   </children>
+</AnchorPane>
